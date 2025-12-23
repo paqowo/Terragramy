@@ -19,15 +19,25 @@ const App: React.FC = () => {
     setShowDetail(false);
 
     setTimeout(() => {
-      const randomIndex = Math.floor(Math.random() * CARDS.length);
-      setCurrentCard(CARDS[randomIndex]);
+      let newCard: TerragramCard;
+      // Ensure we don't draw the same card twice in a row, if possible
+      if (CARDS.length > 1) {
+        do {
+          const randomIndex = Math.floor(Math.random() * CARDS.length);
+          newCard = CARDS[randomIndex];
+        } while (currentCard && newCard.id === currentCard.id);
+      } else {
+        newCard = CARDS[0]; // Fallback for a single card
+      }
+
+      setCurrentCard(newCard);
       
       setTimeout(() => {
         setIsFlipping(false);
         setTimeout(() => setShowDetail(true), 800);
       }, 800);
     }, 100);
-  }, [isFlipping]);
+  }, [isFlipping, currentCard]);
 
   const selectCard = (card: TerragramCard) => {
     setCurrentCard(card);
@@ -35,31 +45,30 @@ const App: React.FC = () => {
   };
 
   const renderHome = () => (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] animate-in fade-in zoom-in duration-700">
+    <div className="flex flex-col items-center justify-center min-h-[70vh] animate-in fade-in zoom-in duration-700 px-4">
       <div className="bg-white p-6 rounded-[3rem] shadow-2xl mb-12 max-w-xs md:max-w-sm flex items-center justify-center">
         {PROVIDER_LOGO}
       </div>
       
-      <h1 className="text-4xl md:text-5xl font-cinzel text-[#D4AF37] mb-12 text-center uppercase tracking-[0.2em] px-4">
+      <h1 className="text-4xl md:text-6xl font-cinzel text-[#D4AF37] mb-12 text-center uppercase tracking-[0.2em] px-4">
         Terragramy
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl px-6">
+      <div className="flex flex-col md:flex-row gap-6 w-full max-w-2xl px-6">
         <button 
           onClick={() => setMode('draw')}
-          className="group relative overflow-hidden bg-[#D4AF37] p-8 rounded-2xl text-white font-cinzel text-xl tracking-widest transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+          className="group relative overflow-hidden w-full text-center bg-gradient-to-b from-[#d4af37] to-[#aa8913] px-8 py-10 rounded-2xl text-[#1a1a1a] font-cinzel transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
         >
-          <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-          <span className="relative z-10 font-bold">KARTA DNE</span>
-          <p className="relative z-10 text-xs mt-2 opacity-70 font-lora lowercase italic">náhodný výběr symbolu</p>
+          <span className="relative z-10 font-black tracking-tight uppercase text-2xl md:text-3xl">KARTA DNE</span>
+          <p className="relative z-10 text-sm mt-2 font-semibold text-black/70 font-lora lowercase italic">náhodný výběr symbolu</p>
         </button>
 
         <button 
           onClick={() => setMode('gallery')}
-          className="group relative overflow-hidden bg-white/5 border border-[#D4AF37]/30 p-8 rounded-2xl text-[#D4AF37] font-cinzel text-xl tracking-widest transition-all hover:scale-105 hover:bg-white/10"
+          className="group relative overflow-hidden w-full text-center bg-white/5 border border-[#D4AF37]/30 px-8 py-10 rounded-2xl text-[#D4AF37] font-cinzel transition-all hover:-translate-y-1 hover:bg-white/10"
         >
-          <span className="relative z-10 font-bold">GALERIE</span>
-          <p className="relative z-10 text-xs mt-2 opacity-70 font-lora lowercase italic">všechny Terragramy</p>
+          <span className="relative z-10 font-black tracking-tight uppercase text-2xl md:text-3xl">GALERIE</span>
+          <p className="relative z-10 text-sm mt-2 font-semibold opacity-80 font-lora lowercase italic">všechny Terragramy</p>
         </button>
       </div>
     </div>
@@ -79,7 +88,16 @@ const App: React.FC = () => {
           <div className="card-face card-back absolute inset-0">
             <CardBack />
           </div>
-          <div className="card-face card-front absolute inset-0 bg-white border-4 border-[#D4AF37] rounded-3xl flex flex-col items-center justify-center p-6 text-center">
+          <div 
+            className="card-face card-front absolute inset-0 border-4 rounded-3xl flex flex-col items-center justify-center p-6 text-center"
+            style={currentCard ? {
+              borderColor: currentCard.symbolColor,
+              backgroundColor: currentCard.symbolColor + '1A',
+            } : {
+              borderColor: '#D4AF37',
+              backgroundColor: 'white'
+            }}
+          >
             {currentCard && (
               <>
                 <div className="w-full h-3/4 flex items-center justify-center p-4">
