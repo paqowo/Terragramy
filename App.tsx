@@ -15,28 +15,35 @@ const App: React.FC = () => {
     if (isFlipping) return;
     
     setIsFlipping(true);
-    setCurrentCard(null);
+    // Immediately hide details and set card to null to trigger flip-back animation.
     setShowDetail(false);
+    setCurrentCard(null);
 
+    // Wait for the flip-back animation to complete (0.8s) before proceeding.
     setTimeout(() => {
       let newCard: TerragramCard;
-      // Ensure we don't draw the same card twice in a row, if possible
+
+      // Select a new card, ensuring it's not the same as the one that was just visible.
+      // The `currentCard` in the closure is the card from the previous state.
       if (CARDS.length > 1) {
         do {
           const randomIndex = Math.floor(Math.random() * CARDS.length);
           newCard = CARDS[randomIndex];
         } while (currentCard && newCard.id === currentCard.id);
       } else {
-        newCard = CARDS[0]; // Fallback for a single card
+        newCard = CARDS[0];
       }
 
+      // Set the new card, which triggers the flip-forward animation.
       setCurrentCard(newCard);
       
+      // After the flip-forward animation (0.8s), wait a moment before
+      // showing the detail view and re-enabling the draw button.
       setTimeout(() => {
+        setShowDetail(true);
         setIsFlipping(false);
-        setTimeout(() => setShowDetail(true), 800);
-      }, 800);
-    }, 100);
+      }, 2000); // 800ms for flip + 1200ms for contemplation.
+    }, 800); // This must match the CSS transition duration.
   }, [isFlipping, currentCard]);
 
   const selectCard = (card: TerragramCard) => {
@@ -46,7 +53,7 @@ const App: React.FC = () => {
 
   const renderHome = () => (
     <div className="flex flex-col items-center justify-center min-h-[70vh] animate-in fade-in zoom-in duration-700 px-4">
-      <div className="bg-white p-6 rounded-[3rem] shadow-2xl mb-12 max-w-xs md:max-w-sm flex items-center justify-center">
+      <div className="bg-white p-6 rounded-[3rem] shadow-2xl mb-12 max-w-[16rem] md:max-w-sm flex items-center justify-center">
         {PROVIDER_LOGO}
       </div>
       
@@ -78,13 +85,13 @@ const App: React.FC = () => {
     <div className="flex flex-col items-center animate-in slide-in-from-right duration-500 w-full max-w-md">
       <button 
         onClick={() => { setMode('home'); setCurrentCard(null); }}
-        className="mb-8 text-[#D4AF37] font-cinzel text-sm uppercase tracking-widest flex items-center gap-2 hover:opacity-70"
+        className="mb-8 text-[#D4AF37] font-cinzel text-sm uppercase tracking-widest flex items-center gap-2 hover:opacity-70 p-2 rounded-lg"
       >
         ← Zpět na úvod
       </button>
 
       <div className="card-perspective w-72 h-[450px] md:w-80 md:h-[500px] cursor-pointer group mb-12" onClick={drawCard}>
-        <div className={`card-inner w-full h-full relative ${currentCard ? 'card-flipped' : ''}`}>
+        <div className={`card-inner w-full h-full relative ${currentCard ? 'card-flipped' : ''} shadow-2xl`}>
           <div className="card-face card-back absolute inset-0">
             <CardBack />
           </div>
@@ -125,7 +132,7 @@ const App: React.FC = () => {
       <div className="flex justify-between items-center mb-12 border-b border-[#D4AF37]/30 pb-6">
         <button 
           onClick={() => setMode('home')}
-          className="text-[#D4AF37] font-cinzel text-sm uppercase tracking-widest flex items-center gap-2 hover:opacity-70"
+          className="text-[#D4AF37] font-cinzel text-sm uppercase tracking-widest flex items-center gap-2 hover:opacity-70 p-2 rounded-lg"
         >
           ← Zpět
         </button>
@@ -171,7 +178,7 @@ const App: React.FC = () => {
         <TerragramCardView card={currentCard} onClose={() => setShowDetail(false)} />
       )}
 
-      <footer className="mt-auto pt-12 text-gray-500 text-[10px] font-cinzel uppercase tracking-[0.3em] opacity-40">
+      <footer className="mt-auto pt-12 text-[#D4AF37] text-[10px] font-cinzel uppercase tracking-[0.3em] opacity-20">
         © SVOBODNÁ SPOLUPRÁCE | Evoluční informační portál
       </footer>
     </div>
