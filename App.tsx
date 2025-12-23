@@ -1,6 +1,6 @@
-
 import React, { useState, useCallback } from 'react';
-import { CARDS, PROVIDER_LOGO, SymbolIcon } from './constants';
+import { CARDS, PROVIDER_LOGO } from './constants';
+import { SymbolIcon } from './components/SymbolIcon';
 import { TerragramCard, AppMode } from './types';
 import TerragramCardView from './components/TerragramCardView';
 import CardBack from './components/CardBack';
@@ -115,25 +115,24 @@ const App: React.FC = () => {
         <div className="w-16"></div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {CARDS.map((card) => (
           <div 
             key={card.id}
             onClick={() => selectCard(card)}
-            className="group cursor-pointer flex flex-col items-center"
+            className="group cursor-pointer flex flex-col items-center transition-all duration-300 hover:scale-105"
           >
             <div 
-              className="w-full aspect-square bg-white border-4 rounded-[2rem] mb-3 flex items-center justify-center p-5 transition-all group-hover:scale-105 shadow-xl overflow-hidden relative"
-              style={{ borderColor: card.symbolColor + 'aa' }}
+              className="w-full aspect-square border-4 rounded-[2rem] mb-3 flex items-center justify-center p-4 shadow-xl overflow-hidden relative transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+              style={{
+                borderColor: card.symbolColor,
+                backgroundColor: card.symbolColor + '1A',
+              }}
             >
-              <div 
-                className="absolute inset-0 opacity-10 pointer-events-none"
-                style={{ background: `radial-gradient(circle, ${card.symbolColor} 0%, transparent 80%)` }}
-              ></div>
               <SymbolIcon card={card} />
             </div>
             <span 
-              className="font-cinzel text-sm tracking-widest uppercase text-center font-bold"
+              className="font-cinzel text-lg tracking-widest uppercase text-center font-bold"
               style={{ color: card.symbolColor }}
             >
               {card.title}

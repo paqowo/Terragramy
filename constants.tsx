@@ -7,7 +7,7 @@ import { TerragramCard } from './types';
  */
 export const PROVIDER_LOGO = (
   <img 
-    src="/Logo1.webp" 
+    src="/logo_1.webp" 
     alt="Svobodná Spolupráce" 
     className="w-full h-auto object-contain"
     style={{ display: 'block', maxWidth: '100%' }}
@@ -27,7 +27,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Jak se cítíte když se vše mění?',
     affirmation: 'Přijímám změnu s pokorou…',
     symbolColor: '#3B82F6',
-    image: '/Změna.webp'
+    image: '/zmena.webp'
   },
   {
     id: 'stavitel',
@@ -38,7 +38,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Jak se cítíte, když dáváte životu volný průběh?',
     affirmation: 'Vše se děje jak má…',
     symbolColor: '#F97316',
-    image: '/Stavitel.webp'
+    image: '/stavitel.webp'
   },
   {
     id: 'vasen',
@@ -49,7 +49,7 @@ export const CARDS: TerragramCard[] = [
     question: 'V jakých oblastech svého života cítíte vášeň a v jakých ne?',
     affirmation: 'Přijímám svou vitální sílu…',
     symbolColor: '#EF4444',
-    image: '/Vasen.webp' // Updated to remove special characters
+    image: '/vasen.webp'
   },
   {
     id: 'tvorivost',
@@ -60,7 +60,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Hledáte inspiraci nebo realizaci?',
     affirmation: 'Jsem klící semínko tvořivosti, rostu ke světlu.',
     symbolColor: '#F97316',
-    image: '/Tvořivost.webp'
+    image: '/tvorivost.webp'
   },
   {
     id: 'hojnost',
@@ -71,7 +71,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Umíte přijímat nebo dávat dary? Cítíte se plný, nebo prázdný?',
     affirmation: 'Jsem plynoucí řeka hojnosti.',
     symbolColor: '#FACC15',
-    image: '/Hojnost.webp'
+    image: '/hojnost.webp'
   },
   {
     id: 'duvera',
@@ -82,7 +82,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Cítíte se podporováni? Věříte si?',
     affirmation: 'Jsem pod ochranou a plně podporován.',
     symbolColor: '#22C55E',
-    image: '/Důvěra.webp'
+    image: '/duvera.webp'
   },
   {
     id: 'srdecnost',
@@ -93,7 +93,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Jak se cítíte když mluvíte o svých pocitech? Co vás zraňuje?',
     affirmation: 'Otevřenost je posvátná služba, přímá cesta k poznání.',
     symbolColor: '#EC4899',
-    image: '/Srdečnost.webp'
+    image: '/srdecnost.webp'
   },
   {
     id: 'sebereflexe',
@@ -104,7 +104,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Cítíte se jako dobrý, nebo špatný člověk? Jak často se hodnotíte?',
     affirmation: 'Přijímám ponaučení bez hodnocení.',
     symbolColor: '#6366F1',
-    image: '/Sebereflexe.webp'
+    image: '/sebereflexe.webp'
   },
   {
     id: 'disciplina',
@@ -115,7 +115,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Čemu dávám v životě pozornost? Dokážu pružně reagovat?',
     affirmation: 'Navracím kvality Duše do své osobnosti.',
     symbolColor: '#EF4444',
-    image: '/Disciplína.webp'
+    image: '/disciplina.webp'
   },
   {
     id: 'dokonceni',
@@ -126,7 +126,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Poznáte, kdy je všechno potřebné hotovo?',
     affirmation: 'Jsem součástí procesu, dokončuji v pravém okamžiku.',
     symbolColor: '#A855F7',
-    image: '/Dokončení.webp'
+    image: '/dokonceni.webp'
   },
   {
     id: 'intuice',
@@ -137,7 +137,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Vnímáte pocity druhých? Máte nějaké předtuchy?',
     affirmation: 'V jemnosti nacházím moudrost a pokoru.',
     symbolColor: '#0EA5E9',
-    image: '/Intuice.webp'
+    image: '/intuice.webp'
   },
   {
     id: 'osvobozeni',
@@ -148,7 +148,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Dokážete opustit svojí identitu, bojíte se smrti?',
     affirmation: 'Rozšiřuji své vědomí, opouštím strach z neznáma.',
     symbolColor: '#D4AF37',
-    image: '/Osvobození.webp'
+    image: '/osvobozeni.webp'
   },
   {
     id: 'sjednoceni',
@@ -159,7 +159,7 @@ export const CARDS: TerragramCard[] = [
     question: 'Představte si, co vám řekne Duše, až jí doopravdy potkáte?',
     affirmation: 'To co je nahoře, je také dole.',
     symbolColor: '#22C55E',
-    image: '/Sjednocení.webp'
+    image: '/sjednoceni.webp'
   },
   {
     id: 'ja_jsem',
@@ -170,7 +170,7 @@ export const CARDS: TerragramCard[] = [
     question: '',
     affirmation: 'Za myšlenkou, za emocí, je skutečné Já, vědomé bytí.',
     symbolColor: '#A855F7',
-    image: '/Já jsem.webp'
+    image: '/ja_jsem.webp'
   },
   {
     id: 'novy_vek',
@@ -181,7 +181,7 @@ export const CARDS: TerragramCard[] = [
     question: '',
     affirmation: 'Jsem květina nového světa, rostu tvou pozorností.',
     symbolColor: '#6366F1',
-    image: '/Nový Věk.webp'
+    image: '/nove_vek.webp'
   },
   {
     id: 'spoluprace',
@@ -192,28 +192,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Co můžete dnes udělat pro celek?',
     affirmation: 'Společně tvoříme krásnější svět.',
     symbolColor: '#D4AF37',
-    image: '/Spolupráce.webp'
+    image: '/spoluprace.webp'
   }
 ];
-
-export const SymbolIcon = ({ card, className = "w-full h-full" }: { card: TerragramCard, className?: string }) => {
-  if (card.image) {
-    return (
-      <img 
-        src={card.image} 
-        alt={card.title} 
-        className={`${className} object-contain`}
-        style={{ display: 'block', margin: 'auto' }}
-        onError={(e) => {
-          console.warn(`Could not load image: ${card.image}`);
-        }}
-      />
-    );
-  }
-
-  return (
-    <div className="flex items-center justify-center font-cinzel text-5xl font-bold" style={{ color: card.symbolColor }}>
-      {card.title.charAt(0)}
-    </div>
-  );
-};
