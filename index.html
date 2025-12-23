@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terragramy - Výklad karet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .card-perspective { perspective: 1000px; }
+        .card-inner { transition: transform 0.8s; transform-style: preserve-3d; }
+        .card-flipped { transform: rotateY(180deg); }
+        .card-face { backface-visibility: hidden; }
+        .card-back { transform: rotateY(0deg); }
+        .card-front { transform: rotateY(180deg); }
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3)); }
+            50% { filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6)); }
+        }
+        .symbol-glow { animation: glow 3s infinite ease-in-out; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div id="root"></div>
+
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
