@@ -27,7 +27,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Jak se cítíte když se vše mění?',
     affirmation: 'Přijímám změnu s pokorou…',
     symbolColor: '#3B82F6',
-    image: '/zmena.webp'
   },
   {
     id: 'stavitel',
@@ -38,7 +37,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Jak se cítíte, když dáváte životu volný průběh?',
     affirmation: 'Vše se děje jak má…',
     symbolColor: '#F97316',
-    image: '/stavitel.webp'
   },
   {
     id: 'vasen',
@@ -49,7 +47,6 @@ export const CARDS: TerragramCard[] = [
     question: 'V jakých oblastech svého života cítíte vášeň a v jakých ne?',
     affirmation: 'Přijímám svou vitální sílu…',
     symbolColor: '#EF4444',
-    image: '/vasen.webp'
   },
   {
     id: 'tvorivost',
@@ -60,7 +57,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Hledáte inspiraci nebo realizaci?',
     affirmation: 'Jsem klící semínko tvořivosti, rostu ke světlu.',
     symbolColor: '#F97316',
-    image: '/tvorivost.webp'
   },
   {
     id: 'hojnost',
@@ -71,7 +67,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Umíte přijímat nebo dávat dary? Cítíte se plný, nebo prázdný?',
     affirmation: 'Jsem plynoucí řeka hojnosti.',
     symbolColor: '#FACC15',
-    image: '/hojnost.webp'
   },
   {
     id: 'duvera',
@@ -82,7 +77,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Cítíte se podporováni? Věříte si?',
     affirmation: 'Jsem pod ochranou a plně podporován.',
     symbolColor: '#22C55E',
-    image: '/duvera.webp'
   },
   {
     id: 'srdecnost',
@@ -93,7 +87,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Jak se cítíte když mluvíte o svých pocitech? Co vás zraňuje?',
     affirmation: 'Otevřenost je posvátná služba, přímá cesta k poznání.',
     symbolColor: '#EC4899',
-    image: '/srdecnost.webp'
   },
   {
     id: 'sebereflexe',
@@ -104,7 +97,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Cítíte se jako dobrý, nebo špatný člověk? Jak často se hodnotíte?',
     affirmation: 'Přijímám ponaučení bez hodnocení.',
     symbolColor: '#6366F1',
-    image: '/sebereflexe.webp'
   },
   {
     id: 'disciplina',
@@ -115,7 +107,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Čemu dávám v životě pozornost? Dokážu pružně reagovat?',
     affirmation: 'Navracím kvality Duše do své osobnosti.',
     symbolColor: '#EF4444',
-    image: '/disciplina.webp'
   },
   {
     id: 'dokonceni',
@@ -126,7 +117,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Poznáte, kdy je všechno potřebné hotovo?',
     affirmation: 'Jsem součástí procesu, dokončuji v pravém okamžiku.',
     symbolColor: '#A855F7',
-    image: '/dokonceni.webp'
   },
   {
     id: 'intuice',
@@ -137,7 +127,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Vnímáte pocity druhých? Máte nějaké předtuchy?',
     affirmation: 'V jemnosti nacházím moudrost a pokoru.',
     symbolColor: '#0EA5E9',
-    image: '/intuice.webp'
   },
   {
     id: 'osvobozeni',
@@ -148,7 +137,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Dokážete opustit svojí identitu, bojíte se smrti?',
     affirmation: 'Rozšiřuji své vědomí, opouštím strach z neznáma.',
     symbolColor: '#D4AF37',
-    image: '/osvobozeni.webp'
   },
   {
     id: 'sjednoceni',
@@ -159,7 +147,6 @@ export const CARDS: TerragramCard[] = [
     question: 'Představte si, co vám řekne Duše, až jí doopravdy potkáte?',
     affirmation: 'To co je nahoře, je také dole.',
     symbolColor: '#22C55E',
-    image: '/sjednoceni.webp'
   },
   {
     id: 'ja_jsem',
@@ -170,7 +157,6 @@ export const CARDS: TerragramCard[] = [
     question: '',
     affirmation: 'Za myšlenkou, za emocí, je skutečné Já, vědomé bytí.',
     symbolColor: '#A855F7',
-    image: '/ja_jsem.webp'
   },
   {
     id: 'novy_vek',
@@ -181,7 +167,6 @@ export const CARDS: TerragramCard[] = [
     question: '',
     affirmation: 'Jsem květina nového světa, rostu tvou pozorností.',
     symbolColor: '#6366F1',
-    image: '/nove_vek.webp'
   },
   {
     id: 'spoluprace',
@@ -192,6 +177,5 @@ export const CARDS: TerragramCard[] = [
     question: 'Co můžete dnes udělat pro celek?',
     affirmation: 'Společně tvoříme krásnější svět.',
     symbolColor: '#D4AF37',
-    image: '/spoluprace.webp'
   }
 ];

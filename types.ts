@@ -8,7 +8,6 @@ export interface TerragramCard {
   question: string;
   affirmation: string;
   symbolColor: string;
-  image?: string; // Path to PNG/JPG if you have them
 }
 
 export type AppMode = 'home' | 'draw' | 'gallery';
