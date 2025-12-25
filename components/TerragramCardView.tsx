@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { TerragramCard } from '../types';
 import { SymbolIcon } from './SymbolIcon';
+import QuestionLabel from './QuestionLabel';
 
 interface Props {
   card: TerragramCard;
@@ -29,7 +29,7 @@ const TerragramCardView: React.FC<Props> = ({ card, onClose }) => {
           
           {/* Affirmation at the VERY TOP as requested */}
           <div className="mb-10 text-center animate-in fade-in slide-in-from-top duration-700">
-             <h3 className="font-cinzel font-bold mb-2 uppercase text-[10px] tracking-[0.5em] opacity-80" style={{ color: card.symbolColor }}>Afirmace</h3>
+             <h3 className="font-cinzel font-bold mb-2 uppercase text-sm md:text-base tracking-[0.5em] opacity-80" style={{ color: card.symbolColor }}>Afirmace</h3>
              <p className="text-2xl md:text-3xl font-cinzel text-gray-900 leading-tight px-4 italic font-bold">
                {card.affirmation}
              </p>
@@ -61,7 +61,9 @@ const TerragramCardView: React.FC<Props> = ({ card, onClose }) => {
 
             {card.question && (
               <div className="p-8 text-center border-y border-gray-200 bg-white/40 rounded-xl">
-                <h3 className="font-cinzel text-[9px] uppercase tracking-[0.4em] mb-4 opacity-50">Otázka k zamyšlení</h3>
+                <QuestionLabel className="mb-4 text-gray-700 opacity-90">
+                  Otázka k zamyšlení
+                </QuestionLabel>
                 <p className="font-semibold text-gray-800 italic text-xl">"{card.question}"</p>
               </div>
             )}
