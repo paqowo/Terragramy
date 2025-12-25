@@ -1,5 +1,5 @@
 import React from 'react';
-import { TerragramCard, AppMode } from '../types';
+import { TerragramCard } from '../types';
 import { SymbolIcon } from './SymbolIcon';
 
 interface GalleryViewProps {
