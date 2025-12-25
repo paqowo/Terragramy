@@ -29,7 +29,12 @@ const TerragramCardView: React.FC<Props> = ({ card, onClose }) => {
           
           {/* Affirmation at the VERY TOP as requested */}
           <div className="mb-10 text-center animate-in fade-in slide-in-from-top duration-700">
-             <h3 className="font-cinzel font-bold mb-2 uppercase text-sm md:text-base tracking-[0.5em] opacity-80" style={{ color: card.symbolColor }}>Afirmace</h3>
+             <QuestionLabel
+               className="mb-2"
+               style={{ color: card.symbolColor, letterSpacing: '0.55em' }}
+             >
+               Afirmace
+             </QuestionLabel>
              <p className="text-2xl md:text-3xl font-cinzel text-gray-900 leading-tight px-4 italic font-bold">
                {card.affirmation}
              </p>
@@ -60,10 +65,10 @@ const TerragramCardView: React.FC<Props> = ({ card, onClose }) => {
             </div>
 
             {card.question && (
-              <div className="p-8 text-center border-y border-gray-200 bg-white/40 rounded-xl">
-                <QuestionLabel className="mb-4 text-gray-700 opacity-90">
-                  Otázka k zamyšlení
-                </QuestionLabel>
+            <div className="p-8 text-center border-y border-gray-200 bg-white/40 rounded-xl">
+              <QuestionLabel className="mb-4" style={{ opacity: 0.9 }}>
+                Otázka k zamyšlení
+              </QuestionLabel>
                 <p className="font-semibold text-gray-800 italic text-xl">"{card.question}"</p>
               </div>
             )}

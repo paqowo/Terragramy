@@ -9,11 +9,3 @@ export interface TerragramCard {
   affirmation: string;
   symbolColor: string;
 }
-
-export type AppMode = 'home' | 'draw' | 'gallery';
-
-export interface AppState {
-  currentCard: TerragramCard | null;
-  mode: AppMode;
-  isFlipping: boolean;
-}
