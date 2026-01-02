@@ -50,7 +50,7 @@ const DailyReveal: React.FC = () => {
             {/* Logo */}
             <div className="w-full flex justify-center pt-4">
               <img
-                src="/logo.webp"
+                src="/logo_1.webp"
                 alt="TerraGram symbol"
                 className="w-[85%] h-auto object-contain drop-shadow-[0_0_15px_rgba(201,162,77,0.15)] transition-transform duration-1000 group-hover:scale-105"
               />

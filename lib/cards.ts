@@ -67,8 +67,8 @@ export const CARDS: Card[] = [
     title: 'DŮVĚRA',
     subtitle: 'přirozená ochrana',
     affirmation: 'Jsem pod ochranou a plně podporován.',
-    body: 'Ó posvátná pra-důvěro, nechť spočinu ve tvém lůnu. Ukonejši mé hledající srdce, jen skrze tvůj klid, najdu sama sebe. Důvěra je niterné souznění v rodinném kruhu domova a bezpečí. Jako ve vztahu maminky a dítěte, posvátného mateřství. Její dar umožňuje najít víru v sebe, ale i v ostatní.',
-    shadow: 'Stín: Strach z opuštění, z toho, že nic nezvládnu. Přílišné připoutání, egocentrizmus.',
+    body: 'Ó posvátná pra-důvěro, nechť spočinu ve tvém lůnu. Ukonejši mé hledající srdce. Jen skrze tvůj klid, najdu sama sebe. Důvěra je niterné souznění v rodinném kruhu domova a bezpečí jako ve vztahu maminky a dítěte, posvátného mateřství. Její dar umožňuje najít víru v sebe, ale i v ostatní.',
+    shadow: 'Stín: Strach z opuštění, z toho, že nic nezvládnu. Přílišné připoutání, egocentrismus.',
     question: 'Cítíte se podporováni? Věříte si?',
     accent: '#4CAF50',
     imagePath: '/assets/cards/duvera.webp'
