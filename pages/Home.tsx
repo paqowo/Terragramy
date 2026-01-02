@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+const logoSrc = `${import.meta.env.BASE_URL}logo.webp`;
+
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const storedTheme = localStorage.getItem('theme');
@@ -59,7 +61,7 @@ const Home: React.FC = () => {
         <div className="lux-shimmer p-4 rounded-full transition-transform duration-700 hover:scale-105">
           <a href="https://www.freecooperation.cz" target="_blank" rel="noopener noreferrer">
             <img 
-              src="/logo.webp" 
+              src={logoSrc} 
               alt="Terragramy Logo" 
               style={{ filter: 'drop-shadow(0 0 25px rgba(201, 162, 77, 0.2))' }}
               className="w-48 md:w-56 h-auto"

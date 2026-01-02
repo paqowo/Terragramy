@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+const symbolAsset = (resourceSlug: string) => `${import.meta.env.BASE_URL}symbols/${resourceSlug}.webp`;
+
 interface SymbolSVGProps {
   slug: string;
   color?: string;
@@ -12,13 +14,13 @@ export const SymbolSVG: React.FC<SymbolSVGProps> = ({
   className = "w-full h-full"
 }) => {
   const [hasError, setHasError] = useState(false);
-  const [src, setSrc] = useState(`/symbols/${slug}.webp`);
+  const [src, setSrc] = useState(() => symbolAsset(slug));
   const [triedFallback, setTriedFallback] = useState(false);
   const slugWithUnderscore = slug.replace(/-/g, '_');
 
   useEffect(() => {
     setHasError(false);
-    setSrc(`/symbols/${slug}.webp`);
+    setSrc(symbolAsset(slug));
     setTriedFallback(false);
   }, [slug]);
 
@@ -40,7 +42,7 @@ export const SymbolSVG: React.FC<SymbolSVGProps> = ({
         className="relative z-10 w-full h-full"
         onError={() => {
           if (!triedFallback && slugWithUnderscore !== slug) {
-            setSrc(`/symbols/${slugWithUnderscore}.webp`);
+            setSrc(symbolAsset(slugWithUnderscore));
             setTriedFallback(true);
           } else {
             setHasError(true);

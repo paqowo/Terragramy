@@ -1,6 +1,8 @@
 import React from 'react';
 import { PROJECT_URL } from '../constants';
 
+const logoSrc = `${import.meta.env.BASE_URL}logo.webp`;
+
 interface LogoLinkProps {
   sizeClass?: string;
 }
@@ -42,7 +44,7 @@ const LogoLink: React.FC<LogoLinkProps> = ({ sizeClass = 'h-16 w-auto object-con
         */}
         <div className="relative z-10 animate-float"> {/* Třídy animate-float a z-10 */}
           <img
-            src="/logo.webp"
+            src={logoSrc}
             alt="Terragramy logo"
             // Ponecháváme původní sizeClass, přidáváme drop-shadow a hover efekt
             className={`${sizeClass} drop-shadow-[0_0_15px_rgba(201,162,77,0.3)] transition-transform duration-700 group-hover:scale-105`}
