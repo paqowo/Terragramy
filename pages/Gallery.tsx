@@ -14,7 +14,7 @@ const Gallery: React.FC = () => {
           Galerie Terragramů
         </h1>
         <p className="font-serif text-[11px] tracking-[0.2em] opacity-60 uppercase max-w-3xl mx-auto text-balance">
-          Zrcadlo poznání. Symbol, který nepromlouvá k mysli, ale k tichu uvnitř Vás. Nechte se vést rezonancí tvarů.
+          Kvality-Symboly, které promlouvají k tichu uvnitř Vás. Nechte se vést rezonancí tvarů a poznáním. Dotekem Vaší posvátné Duše se symboly aktivují...
         </p>
       </header>
 
@@ -36,7 +36,7 @@ const Gallery: React.FC = () => {
           <div className="text-center my-16 space-y-4 max-w-5xl mx-auto">
             <div className="divider-gold w-full max-w-xs mx-auto"></div>
             <p className="font-light text-[10px] tracking-[0.5em] text-[color:var(--muted)] uppercase text-balance">
-              Doplňkové klíče
+              Vědomé klíče
             </p>
             <div className="divider-gold w-full max-w-xs mx-auto"></div>
           </div>
